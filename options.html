@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google search with blacklist</title>
+    <style>
+    body {
+      min-width: 300px;
+      font-size: 15px;
+    }
+    input {
+      margin: 5px;
+      outline: none;
+    }
+    #blacklist {
+      margin: 0;
+      padding: 0;
+      display: table;
+      flex-direction: column;
+    }
+    /* #blacklist .item { } */
+    #blacklist .delete {
+      cursor: pointer;
+    }
+    #blacklist .text, #blacklist .delete {
+      user-select: none;
+    }
+    </style>
+  </head>
+
+  <body>
+    <form id="form">
+      <input id="search" type="text" autofocus  name="search" placeholder="Google Search">
+      <input type="submit" value="Search">
+    </form>
+    <form id="add-form">
+      <input id="blacklist-item-name" type="text" tabindex="1" placeholder="Blacklist Item ">
+      <input type="submit" value="Add">
+    </form>
+
+    <table id="blacklist"></table>
+  </body>
+  <script src="options.js"></script>
+</html>
